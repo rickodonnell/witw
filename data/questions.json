@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Creepy Moon",
+    "image": "moon.png",
+    "location": {
+      "name": "Imagination!",
+      "lat": 28.3725,
+      "lon": -81.5511
+    },
+    "hints": [
+      {
+        "type": "text",
+        "category": "giveaway",
+        "hint": "If only this were just a figment of your imagination..."
+      },
+      {
+        "type": "text",
+        "category": "clever",
+        "hint": "Maybe this clue will spark your memory."
+      }
+    ]
+  },
+  {
+    "title": "Pretty Lights",
+    "image": "lights.png",
+    "location": {
+      "name": "Mad Tea Party",
+      "lat": 28.4186,
+      "lon": -81.5794
+    },
+    "hints": [
+      {
+        "type": "text",
+        "category": "giveaway",
+        "hint": "This place is spinning out of control."
+      },
+      {
+        "type": "text",
+        "category": "clever",
+        "hint": ""
+      }
+    ]
+  },
+  {
+    "title": "Post",
+    "image": "post.png",
+    "location": {
+      "name": "United Kingdom",
+      "lat": 28.3706,
+      "lon": -81.5522
+    },
+    "hints": [
+      {
+        "type": "text",
+        "category": "giveaway",
+        "hint": "This spot is revolutionary."
+      },
+      {
+        "type": "image",
+        "category": "giveaway",
+        "hint": "post_hint1.png"
+      }
+    ]
+  },
+  {
+    "title": "Wall",
+    "image": "wall.png",
+    "location": {
+      "name": "Listen to the Land",
+      "lat": 28.3742,
+      "lon": -81.5519
+    },
+    "hints": [
+      {
+        "type": "text",
+        "category": "giveaway",
+        "hint": "Just make believe..."
+      },
+      {
+        "type": "image",
+        "category": "slight",
+        "hint": "wall_hint1.png"
+      },
+      {
+        "type": "image",
+        "category": "significant",
+        "hint": "wall_hint2.png"
+      }
+    ]
+  }
+
+]

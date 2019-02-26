@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where in the World?</title>
+
+  <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Icon library @ https://ionicons.com/  -- see page for possible icons -->
+  <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/witw.css">
+  <!--  Walt Disney Script special characters:
+        &#170; - Filled Mouse-ears
+        &#172; - Walt's signature
+        &#186; - Script empty Mouse-ears
+  -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <!--<script src="js/bootstrap.min.js"></script>-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+
+  <script src="js/witw.js"></script>
+
+  <script>
+    $(function() {
+      witw.initTemplates();
+      witw.showFirstPuzzle();
+      $(document).on("click", ".reload-puzzle", function() {
+        witw.renderNextPuzzle();
+      });
+      $(document).on("click", ".btn-location-guess", function(e) {
+        witw.guessLocation(e.target.id, e.target.innerHTML);
+      });
+      $(".alert").alert();
+    });
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="witw-header">&#170; Where in the World? &#170;</h1>
+  <div id="puzzle"></div>
+  <div id="correctGuess" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading">Congratulations!</h4>
+    You found the location! <a href="#" class="alert-link reload-puzzle">Load a new puzzle!</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="guesses">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb invisible">
+      </ol>
+    </nav>
+    <h6>Guess the location</h6>
+    <div id="locationButtons"></div>
+  </div>
+  <button class="btn btn-secondary reload-puzzle"><i class="icon ion-ios-refresh"></i></button>
+</div>
+
+<script id="puzzleTemplate" type="text/x-handlebars-template">
+  <img src="data/images/{{image}}" class="img-fluid"/>
+  <br/>
+  <b>{{title}}</b>
+</script>
+
+<script id="locationButtonsTemplate" type="text/x-handlebars-template">
+  {{#each locations}}
+  <button class="btn btn-primary btn-location-guess" id="btnLoc{{id}}">{{name}}</button>
+  {{/each}}
+</script>
+
+</body>
+</html>

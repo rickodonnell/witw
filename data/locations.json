@@ -1,0 +1,405 @@
+[
+  {
+    "name": "Magic Kingdom",
+    "children": [
+      {
+        "name": "TomorrowLand",
+        "children": [
+          {
+            "name": "Tomorrowland Speedway"
+          },
+          {
+            "name": "Space Mountain"
+          },
+          {
+            "name": "Astro Orbiter"
+          },
+          {
+            "name": "Tomorrowland Transit Authority"
+          },
+          {
+            "name": "Carousel of Progress"
+          },
+          {
+            "name": "Buzz Lightyear"
+          },
+          {
+            "name": "Monsters Inc. Laugh Floor"
+          },
+          {
+            "name": "Cosmic Ray's"
+          },
+          {
+            "name": "Auntie Gravity's Galactic Goodies"
+          },
+          {
+            "name": "Mickey's Star Traders"
+          }
+        ]
+      },
+      {
+        "name": "FantasyLand",
+        "children": [
+          {
+            "name": "Carousel"
+          },
+          {
+            "name": "Mickey's PhilharMagic"
+          },
+          {
+            "name": "Peter Pan's Flight"
+          },
+          {
+            "name": "it's a small world"
+          },
+          {
+            "name": "Enchanted Tales with Belle"
+          },
+          {
+            "name": "Journey of the Little Mermaid"
+          },
+          {
+            "name": "Ariel's Grotto"
+          },
+          {
+            "name": "The Barnstormer"
+          },
+          {
+            "name": "Dumbo"
+          },
+          {
+            "name": "Mad Tea Party"
+          },
+          {
+            "name": "Many Adventures of Winnie the Pooh"
+          },
+          {
+            "name": "Seven Dwarfs Mine Train"
+          },
+          {
+            "name": "Cinderella's Castle"
+          },
+          {
+            "name": "Pinoccio Village Haus"
+          },
+          {
+            "name": "Be Our Guest"
+          },
+          {
+            "name": "Gaston's Tavern"
+          }
+        ]
+      },
+      {
+        "name": "Liberty Square",
+        "children": [
+          {
+            "name": "Hall of Presidents"
+          },
+          {
+            "name": "Liberty Square Riverboat"
+          },
+          {
+            "name": "Haunted Mansion"
+          },
+          {
+            "name": "Liberty Tree Tavern"
+          },
+          {
+            "name": "The Diamond Horseshoe"
+          },
+          {
+            "name": "Columbia Harbor House"
+          }
+        ]
+      },
+      {
+        "name": "FrontierLand",
+        "children": [
+          {
+            "name": "Splash Mountain"
+          },
+          {
+            "name": "Big Thunder Mountain Railroad"
+          },
+          {
+            "name": "Tom Sawyer Island"
+          },
+          {
+            "name": "Country Bear Jamboree"
+          },
+          {
+            "name": "Pecos Bill Tall Tale Inn"
+          }
+        ]
+      },
+      {
+        "name": "AdventureLand",
+        "children": [
+          {
+            "name": "Swiss Family Treehouse"
+          },
+          {
+            "name": "Magic Carpets of Aladdin"
+          },
+          {
+            "name": "Jungle Cruise"
+          },
+          {
+            "name": "Enchanted Tiki Room"
+          },
+          {
+            "name": "Pirates of the Caribbean"
+          },
+          {
+            "name": "Sunshine Tree Terrace"
+          },
+          {
+            "name": "Aloha Isle"
+          },
+          {
+            "name": "Tortuga Tavern"
+          }
+        ]
+      },
+      {
+        "name": "Main Street USA",
+        "children": [
+          {
+            "name": "WDW Railroad"
+          },
+          {
+            "name": "City Hall"
+          },
+          {
+            "name": "Harmony Barber Shop"
+          },
+          {
+            "name": "Town Square Theater"
+          },
+          {
+            "name": "Tony's Town Square Restaurant"
+          },
+          {
+            "name": "Main Street Bakery"
+          },
+          {
+            "name": "Casey's Corner"
+          },
+          {
+            "name": "The Crystal Palace"
+          },
+          {
+            "name": "The Plaza Restaurant"
+          },
+          {
+            "name": "Main St Chamber of Commerce"
+          },
+          {
+            "name": "Emporium"
+          },
+          {
+            "name": "Main St Cinema"
+          },
+          {
+            "name": "Plaza Ice Cream Parlor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Epcot",
+    "children": [
+      {
+        "name": "Future World",
+        "children": [
+          {
+            "name": "Spaceship Earth"
+          },
+          {
+            "name": "Mission: SPACE"
+          },
+          {
+            "name": "Test Track"
+          },
+          {
+            "name": "Innoventions"
+          },
+          {
+            "name": "Electric Umbrella"
+          },
+          {
+            "name": "Mouse Gear"
+          },
+          {
+            "name": "The Seas"
+          },
+          {
+            "name": "The Land",
+            "children": [
+              {
+                "name": "Listen to the Land"
+              },
+              {
+                "name": "Soarin'"
+              },
+              {
+                "name": "Sunshine Seasons"
+              }
+            ]
+          },
+          {
+            "name": "Imagination!"
+          },
+          {
+            "name": "Club Cool"
+          },
+          {
+            "name": "Innoventions Plaza"
+          },
+          {
+            "name": "Ellen's Energy Adventure"
+          },
+          {
+            "name": "Wonders of Life"
+          }
+        ]
+      },
+      {
+        "name": "World Showcase",
+        "children": [
+          {
+            "name": "Canada"
+          },
+          {
+            "name": "United Kingdom"
+          },
+          {
+            "name": "International Gateway"
+          },
+          {
+            "name": "France"
+          },
+          {
+            "name": "Morocco"
+          },
+          {
+            "name": "Japan"
+          },
+          {
+            "name": "The American Adventure"
+          },
+          {
+            "name": "Italy"
+          },
+          {
+            "name": "Germany"
+          },
+          {
+            "name": "Outpost"
+          },
+          {
+            "name": "China"
+          },
+          {
+            "name": "Norway"
+          },
+          {
+            "name": "Mexico"
+          },
+          {
+            "name": "World Showcase Lagoon"
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "name": "Hollywood Studios",
+    "children": [
+      {
+        "name": "Hollywood Boulevard"
+      },
+      {
+        "name": "Echo Lake"
+      },
+      {
+        "name": "Animation Courtyard"
+      },
+      {
+        "name": "Commissary Lane"
+      },
+      {
+        "name": "Toy Story Land"
+      },
+      {
+        "name": "Grand Avenue"
+      }
+    ]
+  },
+  {
+    "name": "Animal Kingdom",
+    "children": [
+      {
+        "name": "Oasis"
+      },
+      {
+        "name": "Dinoland USA"
+      },
+      {
+        "name": "Discovery Island"
+      },
+      {
+        "name": "Asia"
+      },
+      {
+        "name": "Africa"
+      },
+      {
+        "name": "Pandora"
+      }
+    ]
+  },
+  {
+    "name": "Other",
+    "children": [
+      {
+        "name": "Downtown Disney"
+      },
+      {
+        "name": "Water Park"
+      },
+      {
+        "name": "Mini Golf"
+      },
+      {
+        "name": "Resorts",
+        "children": [
+          {
+            "name": "Polynesian"
+          },
+          {
+            "name": "Beach Club"
+          },
+          {
+            "name": "Bay Lake Tower"
+          },
+          {
+            "name": "Old Key West"
+          },
+          {
+            "name": "Caribbean Beach"
+          },
+          {
+            "name": "Port Orleans Riverside"
+          },
+          {
+            "name": "Boardwalk"
+          }
+        ]
+      }
+    ]
+  }
+]

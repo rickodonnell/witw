@@ -1,0 +1,24 @@
+@font-face {font-family: "Walt Disney Script";
+    src: url("//db.onlinewebfonts.com/t/ac9867a6602b0b640e27d39b2fda4bfd.eot");
+    src: url("//db.onlinewebfonts.com/t/ac9867a6602b0b640e27d39b2fda4bfd.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/ac9867a6602b0b640e27d39b2fda4bfd.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/ac9867a6602b0b640e27d39b2fda4bfd.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/ac9867a6602b0b640e27d39b2fda4bfd.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/ac9867a6602b0b640e27d39b2fda4bfd.svg#Walt Disney Script v4.1") format("svg");
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.witw-header {
+    font-family: "Walt Disney Script", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#puzzle {
+    text-align: center;
+}
+.btn-location-guess {
+    margin-bottom: 8px;
+}
+#correctGuess {
+    display: none;
+}
