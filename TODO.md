@@ -25,8 +25,10 @@
 - Smaller things
   - Get consistent naming between "puzzles" and "questions"
   - Add fields to questions
-    - Author
-    - Date added
+    - Guid
+    - Reveal
+    - ~~Author~~
+    - ~~Date added~~
   - Add fields to location
     - Active vs Inactive (past?)
     - More guid-like ID
