@@ -30,8 +30,8 @@
     $(function() {
       witw.initTemplates();
       witw.showFirstPuzzle();
-      $(document).on("click", ".reload-puzzle", function() {
-        witw.renderNextPuzzle();
+      $(document).on("click", ".load-new-puzzle", function(e) {
+        witw.renderNextPuzzle(e.target.title);
       });
       $(document).on("click", ".btn-location-guess", function(e) {
         witw.guessLocation(e.target.id, e.target.innerHTML);
@@ -47,7 +47,7 @@
   <div id="puzzle"></div>
   <div id="correctGuess" class="alert alert-warning alert-dismissible fade show" role="alert">
     <h4 class="alert-heading">Congratulations!</h4>
-    You found the location! <a href="#" class="alert-link reload-puzzle">Load a new puzzle!</a>
+    You found the location! <a href="#" class="alert-link load-new-puzzle" title="Next">Load a new puzzle!</a>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -60,11 +60,19 @@
     <h6>Guess the location</h6>
     <div id="locationButtons"></div>
   </div>
-  <button class="btn btn-secondary reload-puzzle"><i class="icon ion-ios-refresh"></i></button>
+  <button class="btn btn-secondary load-new-puzzle" title="Previous">
+    <i class="icon ion-md-arrow-back" title="Previous"></i>
+  </button>
+  <button class="btn btn-secondary load-new-puzzle" title="Random">
+    <i class="icon ion-md-refresh" title="Random"></i>
+  </button>
+  <button class="btn btn-secondary load-new-puzzle" title="Next">
+    <i class="icon ion-md-arrow-forward" title="Next"></i>
+  </button>
 </div>
 
 <script id="puzzleTemplate" type="text/x-handlebars-template">
-  <img src="data/images/{{image}}" class="img-fluid"/>
+  <img src="data/images/{{image.source}}" class="img-fluid"/>
   <br/>
   <b>{{title}}</b>
 </script>

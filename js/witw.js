@@ -4,7 +4,9 @@
   const questionsUrl = 'data/questions.json';
 
   let puzzleTemplate, locationButtonsTemplate;
-  let locations, questions, currentQuestion, currentLocation, currentLocationOptions;
+  let locations, questions;
+  let currentQuestion, currentQuestionIdx = 0;
+  let currentLocation, currentLocationOptions;
 
   const fetchJSON = (url) => {
     return new Promise((resolve, reject) => {
@@ -25,8 +27,15 @@
     });
   };
 
-  const getRandomQuestion = () => {
-    return questions[Math.floor(Math.random()*questions.length)];
+  const getNewQuestion = (choice) => {
+    if (choice === 'Previous') {
+      currentQuestionIdx = (currentQuestionIdx - 1 + questions.length) % questions.length;
+    } else if (choice === 'Next') {
+      currentQuestionIdx = (currentQuestionIdx + 1) % questions.length;
+    } else {
+      currentQuestionIdx = Math.floor(Math.random() * questions.length);
+    }
+    currentQuestion = questions[currentQuestionIdx];
   };
 
   const findLocation = (locArr, locName) => {
@@ -58,8 +67,8 @@
       });
     },
 
-    renderNextPuzzle: function() {
-      currentQuestion = getRandomQuestion();
+    renderNextPuzzle: function(chooseMethod) {
+      getNewQuestion(chooseMethod);
       findLocation(locations, currentQuestion.location.name);
       currentLocationOptions = locations;
       $('#correctGuess').hide();
@@ -70,7 +79,6 @@
 
     guessLocation: function(elId, locName) {
       const id = parseInt(elId.substr(6));
-      console.log(id, elId, currentLocation);
       if (currentLocation.id === id) { // they found it
         $('#correctGuess').show();
         $('#guesses ol.breadcrumb').removeClass('invisible').append($(`<li class="breadcrumb-item">${locName}</li>`));

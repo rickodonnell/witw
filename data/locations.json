@@ -375,6 +375,26 @@
         "name": "Mini Golf"
       },
       {
+        "name": "Boardwalk",
+        "children": [
+          {
+            "name": "ESPN Club"
+          },
+          {
+            "name": "JellyRolls"
+          },
+          {
+            "name": "Boardwalk Bakery"
+          },
+          {
+            "name": "Atlantic Dance Hall"
+          },
+          {
+            "name": "Flying Fish"
+          }
+        ]
+      },
+      {
         "name": "Resorts",
         "children": [
           {
@@ -396,7 +416,7 @@
             "name": "Port Orleans Riverside"
           },
           {
-            "name": "Boardwalk"
+            "name": "Boardwalk Hotel"
           }
         ]
       }
