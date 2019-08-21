@@ -16,6 +16,25 @@
     });
   };
 
+  var restdbSettings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://witwd-c2d2.restdb.io/rest/location",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": "5c78988ccac6621685acb968",
+      "cache-control": "no-cache"
+    }
+  };
+  const getLocations = () => {
+    return new Promise((resolve, reject) => {
+      $.ajax(restdbSettings)
+        .done((json) => resolve(json))
+        .fail((xhr, status, err) => reject(status + err.message));
+    });
+  };
+
   let id = 0;
   const augmentLocations = (locs, parents) => {
     locs.forEach((loc) => {
@@ -55,13 +74,41 @@
       locationButtonsTemplate = Handlebars.compile($('#locationButtonsTemplate').html());
     },
 
+    showLocations: function() {
+      const locationTemplate = Handlebars.compile($('#locationTemplate').html());
+      const fillTemplate = (loc, depth) => {
+        loc.depth = depth;
+        $('#locations').append(locationTemplate(loc));
+        console.log(loc.name, loc.children);
+        if (loc.children && loc.children.length > 0) {
+          loc.children.forEach(lo => {
+            const child = locations.find(l => l._id === lo._id);
+            child.hasParent = true;
+            fillTemplate(child, depth+1);
+          });
+        }
+      };
+      getLocations().then(locs => {
+        locations = locs;
+        const root = locs.find(l => l.name === "WDW");
+        fillTemplate(root, 1);
+        console.log(root);
+        // find orphans
+        locations.filter(loc => !loc.hasParent && loc.name !== 'WDW').forEach(l => {
+          fillTemplate(l, 1);
+        });
+      });
+    },
+
     showFirstPuzzle: function() {
       Promise.all([
         fetchJSON(locationsUrl),
-        fetchJSON(questionsUrl)
+        fetchJSON(questionsUrl),
+        getLocations()
       ]).then((data) => {
         locations = data[0];
         questions = data[1];
+        console.log(data[2]);
         augmentLocations(locations, []);
         this.renderNextPuzzle();
       });
